@@ -6,6 +6,10 @@
   "author": "Stefan Martin",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "dev": "webpack --config build/webpack.dev.js",
+    "prod": "webpack --config build/webpack.prod.js"
+  },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
@@ -13,10 +17,13 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-typescript": "^7.1.0",
-    "webpack": "^4.20.2"
+    "babel-loader": "^8.0.4",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
-    "@types/webpack": "^4.4.16"
+    "@types/webpack": "^4.4.16",
+    "webpack-merge": "^4.1.4"
   }
 }

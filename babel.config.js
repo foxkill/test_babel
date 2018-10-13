@@ -7,7 +7,7 @@ const presets = [
                     "last 4 versions"
                 ] 
             },
-            useBuiltIns: "usage",
+            useBuiltIns: "usage"
         },
     ],
     ["@babel/typescript"]
