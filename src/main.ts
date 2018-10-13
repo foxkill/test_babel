@@ -13,7 +13,7 @@
  * @version   $Id$
  */
 
-function reader(data) {
+function mreader(data: Blob): void {
     let f = new FileReader();
 
     f.addEventListener('loadend', function (e) {
@@ -25,4 +25,4 @@ function reader(data) {
 
 fetch("http://intern.localhost/intern_fern/style/intern.css")
     .then(res => res.blob())
-    .then((blob) => reader(Blob));
+    .then((blob) => mreader(blob));
