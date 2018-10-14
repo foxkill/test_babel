@@ -13,6 +13,7 @@
  * @version   $Id$
  */
 
+import 'whatwg-fetch'
 function mreader(data: Blob): void {
     let f = new FileReader();
 

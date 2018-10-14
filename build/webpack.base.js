@@ -1,10 +1,11 @@
+const webpack = require("webpack");
 const path = require("path");
 
 module.exports = {
     entry: "./src/main.ts",
     output: {
-        path: path.resolve(__dirname, "lib"),
-        filename: "main.bundle.js"
+        path: path.resolve(__dirname, "../lib"),
+        filename: "[name].bundle.js"
     },
     resolve: {
         extensions: [".ts", ".js"]
@@ -17,5 +18,10 @@ module.exports = {
                 exclude: /node_modules/
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            'fetch': 'exports-loader?global.fetch!whatwg-fetch'
+        }),
+    ]
 }
